@@ -1,7 +1,7 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-    <title>Acme Product Management</title>
+    <title>Acme Product Management - v0.1.0</title>
 	<meta charset="utf-8" />
     <link href="Content/bootstrap.css" rel="stylesheet" />
 </head>
@@ -11,8 +11,8 @@
     <nav class="navbar navbar-default">
         <div class="container-fluid">
             <div class="navbar-header">
-                <div class="navbar-brand">Acme Product Management</div>
-                <form ng-hide="vm.isLoggedIn" class="navbar-form navbar-right">
+                <div class="navbar-brand">Acme Product Management - v0.1.0</div>
+                <form ng-hide="vm.isLoggedIn()" class="navbar-form navbar-right">
                     <div class="form-group">
                         <input type="text"
                                class="form-control"
@@ -42,7 +42,7 @@
     </nav>
 
     <div class="container">
-        <div ng-if="vm.isLoggedIn"
+        <div ng-if="vm.isLoggedIn()"
              ng-include="'app/products/productEditView.html'"></div>
     </div>
 
@@ -57,6 +57,7 @@
     <script src="common/common.services.js"></script>
     <script src="common/productResource.js"></script>
     <script src="common/userAccount.js"></script>
+    <script src="common/currentUser.js"></script>
 
     <!-- Controllers -->
     <script src="app/products/productListCtrl.js"></script>
